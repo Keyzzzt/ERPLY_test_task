@@ -1,0 +1,19 @@
+@import '../../../02_Styles/variables';
+
+.searchBar {
+  position: relative;
+  margin: 20px 0;
+  display: flex;
+  max-width: 100%;
+  @include breakpoint(540px) {
+    max-width: 500px;
+  }
+
+  & input[type='text'] {
+    flex: 1;
+  }
+
+  & input:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}

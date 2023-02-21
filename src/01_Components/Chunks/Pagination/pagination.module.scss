@@ -1,0 +1,31 @@
+@import '../../../02_Styles/variables';
+
+.pagination {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.list {
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  & li {
+    line-height: 45px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  & li.numb {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    margin: 0 3px;
+  }
+
+  & li.numb:hover,
+  & li.active {
+    background: $white;
+  }
+}
+

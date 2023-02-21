@@ -1,0 +1,36 @@
+@import '../../../02_Styles/variables';
+
+
+
+.news {
+  & .newsItem {
+    border-radius: $bRadius;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all $transitionTime;
+
+    &:hover {
+      box-shadow: $boxShadow;
+    }
+
+    @include breakpoint(480) {
+      flex-direction: row;
+      justify-content: flex-start;
+
+    }
+
+    & img {
+      width: 100%;
+      margin-bottom: 10px;
+      @include breakpoint(480) {
+        width: 200px;
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}

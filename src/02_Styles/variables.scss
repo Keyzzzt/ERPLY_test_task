@@ -1,0 +1,57 @@
+$base: 10px;
+$offset: 10px;
+
+$letterSpacing: .7px;
+$boxShadow: 0 0 0 1px rgba(0, 0, 0, .07), 0 2px 4px rgba(0, 0, 0, 0.05), 0 12px 24px rgba(0, 0, 0, .05);
+$boxShadowHover: 0 0 0 1px rgba(0, 0, 0, .07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 12px 24px rgba(0, 0, 0, .07);
+$bRadius: 5px;
+$headerHeight: 120px;
+$loaderColor: #00b4b5;
+$transitionTime: 0.3s;
+
+
+// Colors
+$Page404Bg: #776F64;
+$borderColor: #a8aaae;
+$success: #0ebeb0;
+$successHover: #0ca296;
+$successActive: #0a8f85;
+$danger: #C95445;
+$dangerHover: #Ba4536;
+$dangerActive: #B13c34;
+$white: #f3f3f3;
+$textColor: #1b1c1c;
+
+
+@mixin breakpoint($point) {
+  @if $point == 1400 {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else if $point == 1200 {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == 1024 {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == 992 {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == 768 {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == 540 {
+    @media (min-width: 540px) {
+      @content;
+    }
+  }  @else if $point == 480 {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+}
+

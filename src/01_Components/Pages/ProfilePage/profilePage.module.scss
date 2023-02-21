@@ -1,0 +1,21 @@
+@import '../../../02_Styles/variables';
+
+.formContainer {
+  margin: 200px auto;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: $boxShadow;
+  border-radius: $bRadius;
+  transition: all $transitionTime;
+  text-align: center;
+  & h1 {
+    font-size: 20px;
+  }
+  & .nameInput{
+    margin-bottom: 20px;
+    text-align: left;
+    input {
+      margin-top: 5px;
+    }
+  }
+}

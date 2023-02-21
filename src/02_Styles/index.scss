@@ -1,0 +1,121 @@
+@import 'normilize';
+@import 'reset';
+@import 'variables';
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 200;
+  //font-style: italic;
+  src: url("./../assets/fonts/poppins-extralight-webfont.woff2") format('woff2'),
+  url("./../assets/fonts/poppins-extralight-webfont.woff") format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  //font-style: italic;
+  src: url("./../assets/fonts/poppins-regular-webfont.woff2") format('woff2'),
+  url("./../assets/fonts/poppins-regular-webfont.woff") format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  //font-style: italic;
+  src: url("./../assets/fonts/poppins-medium-webfont.woff2") format('woff2'),
+  url("./../assets/fonts/poppins-medium-webfont.woff") format('woff');
+}
+
+html {
+  font-size: 10px;
+  caret-color: transparent;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: $letterSpacing;
+  font-size: 16px;
+  color: $textColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+label {
+  font-size: 14px;
+}
+
+a {
+  color: $textColor;
+}
+
+.container {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 $offset;
+}
+
+//
+//.row {
+//  display: flex;
+//  flex-wrap: wrap;
+//  margin: 0 calc(#{$offset} * -1);
+//  position: relative;
+//}
+//
+//.col {
+//  margin: $offset;
+//}
+
+.success,
+.danger,
+.disabled {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 10px;
+  min-width: 50px;
+  text-align: center;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+}
+
+.success {
+  background-color: $success;
+
+  &:hover {
+    background-color: $successHover;
+  }
+
+  &:active {
+    background-color: $successActive;
+  }
+}
+
+.danger {
+  background-color: $danger;
+  transition: .5s all;
+
+  &:hover {
+    background-color: $dangerHover;
+  }
+
+  &:active {
+    background-color: $dangerActive;
+  }
+}
+
+.disabled {
+  background-color: $borderColor;
+  cursor: auto;
+}
+
+.commonInput {
+  width: 100%;
+  border-radius: $bRadius;
+  padding: 10px;
+
+  &::placeholder {
+    color: $borderColor;
+  }
+}

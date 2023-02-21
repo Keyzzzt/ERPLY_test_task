@@ -1,0 +1,35 @@
+@import '../../../02_Styles/variables';
+
+.field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px; // Reserved for error message
+  text-align: left;
+  & input {
+    margin-top: 5px;
+  }
+
+  &.shake {
+    animation: shake 0.3s ease-in-out;
+  }
+}
+@keyframes shake {
+  20%,
+  80% {
+    margin-left: -4px;
+  }
+  40%,
+  60% {
+    margin-left: 4px;
+  }
+}
+.errorText {
+  position: absolute;
+  right: 0;
+  color: $danger;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.borderError {
+  border-color: $danger;
+}

@@ -1,0 +1,55 @@
+@import '../../../02_Styles/variables';
+
+.formContainer {
+  position: relative;
+  margin: 25vh auto;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: $boxShadow;
+  border-radius: $bRadius;
+  transition: all $transitionTime;
+  text-align: center;
+  .help {
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 5px;
+    display: inline-block;
+  }
+  & h1 {
+    font-size: 20px;
+  }
+  &:hover {
+    box-shadow: $boxShadowHover;
+  }
+}
+.clue {
+  min-width: 300px;
+  padding: 20px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  box-shadow: $boxShadowHover;
+  border-radius: $bRadius;
+  background-color: $white;
+  transition: opacity $transitionTime;
+  opacity: 0;
+  z-index: -100;
+  &.showClue {
+    opacity: 1;
+    z-index: 10;
+  }
+  .clueText{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    & a {
+      border-bottom: 1px solid $borderColor;
+      font-weight: 500;
+    }
+
+  }
+}
+
+

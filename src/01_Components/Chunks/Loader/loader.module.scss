@@ -1,0 +1,33 @@
+@import '../../../02_Styles/variables';
+
+.loader_1:before,
+.loader_2:before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  z-index: 100;
+}
+.loader_1:before {
+  border-top-color: $loaderColor;
+  border-bottom-color: $loaderColor;
+  animation: spinner 0.7s linear infinite;
+}
+
+.loader_2:before {
+  border-top: 2px solid $loaderColor;
+  border-right: 2px solid transparent;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

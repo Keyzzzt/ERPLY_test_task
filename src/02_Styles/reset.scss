@@ -1,0 +1,33 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li{
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+textarea,
+input{
+  outline: 0;
+  border: 1px solid $borderColor;
+  font-size: 14px;
+  caret-color: #000;
+
+}
