@@ -1,9 +1,9 @@
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux'
 import thunk from 'redux-thunk'
-import {loginReducer} from "./Reducers/loginReducer/loginReducer";
-import {newsReducer} from "./Reducers/topNewsReducer/newsReducer";
-import {articleReducer} from "./Reducers/articleReducer/articleReducer";
-import {appReducer} from "./Reducers/appReducer/appReducer";
+import {loginReducer} from './Reducers/loginReducer/loginReducer'
+import {newsReducer} from './Reducers/topNewsReducer/newsReducer'
+import {articleReducer} from './Reducers/articleReducer/articleReducer'
+import {appReducer} from './Reducers/appReducer/appReducer'
 
 const rootReducer = combineReducers({
     app: appReducer,
@@ -15,7 +15,7 @@ const email = localStorage.getItem('email')
 const apiKey = localStorage.getItem('apiKey')
 const name = localStorage.getItem('name')
 
-const info = email && apiKey ? {email, apiKey, name: name ? name: ''} : null
+const info = email && apiKey ? {email, apiKey, name: name ? name : ''} : null
 const initialState = {
     login: {
         userInfo: info,

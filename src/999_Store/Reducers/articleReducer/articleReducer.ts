@@ -1,5 +1,5 @@
-import {InferActionTypes} from "../../../types";
-import {ArticleType} from "../loginReducer/loginReducer";
+import {InferActionTypes} from '../../../types'
+import {ArticleType} from '../loginReducer/loginReducer'
 
 type InitialStateType = typeof initialState
 type ActionType = InferActionTypes<typeof actions>

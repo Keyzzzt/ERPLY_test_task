@@ -1,4 +1,4 @@
-import {actions, initialState, loginReducer} from "./loginReducer";
+import {actions, initialState, loginReducer} from './loginReducer'
 
 test('should set loading to true', () => {
     const endState = loginReducer(initialState, actions.requestAC())
@@ -23,7 +23,7 @@ test('should set userInfo and loading to false', () => {
     expect(endState.loading).toEqual(false)
 })
 test('should reset messages', () => {
-    const startState= {
+    const startState = {
         userInfo: {name: 'Alex', email: 'gmail', apiKey: 'hello'},
         loading: false,
         errorMessage: 'ok',
@@ -35,7 +35,7 @@ test('should reset messages', () => {
 })
 
 test('should reset messages, userInfo and localStorage', () => {
-    const startState= {
+    const startState = {
         userInfo: {name: 'Alex', email: 'gmail', apiKey: 'hello'},
         loading: false,
         errorMessage: 'ok',

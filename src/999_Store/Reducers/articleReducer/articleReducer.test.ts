@@ -1,5 +1,5 @@
-import {actions, articleReducer, initialState} from "./articleReducer";
-import {generateArticle} from "../../../04_Utils/utils";
+import {actions, articleReducer, initialState} from './articleReducer'
+import {generateArticle} from '../../../04_Utils/generateArticle'
 
 test('should set loading to true', () => {
     const article = generateArticle()

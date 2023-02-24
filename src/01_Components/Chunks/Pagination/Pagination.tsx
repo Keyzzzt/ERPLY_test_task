@@ -37,15 +37,15 @@ export const Pagination: FC<Props> = ({setPageHandler, totalPages, newsCount, cu
                         </>
                     )}
                     {pagesCount.map((pageNumber, i) =>
-                        pageNumber < currentPage + 4 && pageNumber > currentPage - 4 && (
-                            <li
-                                className={`${s.numb} ${pageNumber === currentPage && s.active}`}
-                                onClick={() => changePageHandler(pageNumber)}
-                                key={i}
-                            >
-                                {pageNumber}
-                            </li>
-                        )
+                            pageNumber < currentPage + 4 && pageNumber > currentPage - 4 && (
+                                <li
+                                    className={`${s.numb} ${pageNumber === currentPage && s.active}`}
+                                    onClick={() => changePageHandler(pageNumber)}
+                                    key={i}
+                                >
+                                    {pageNumber}
+                                </li>
+                            )
                     )}
 
                     {(totalPages - currentPage > 4) && (

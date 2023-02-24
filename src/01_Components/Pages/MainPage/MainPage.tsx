@@ -1,16 +1,16 @@
 import s from './mainPage.module.scss'
 import React, {FC, useState, useEffect, FormEvent} from 'react'
-import {useDispatch, useSelector} from "react-redux";
-import {topNewsTC} from "../../../999_Store/Reducers/topNewsReducer/newsReducer";
-import {useNavigate} from 'react-router-dom';
-import {Loader} from "../../Chunks/Loader/Loader";
-import {ArticleType, UserInfoType} from "../../../999_Store/Reducers/loginReducer/loginReducer";
-import {actions} from "../../../999_Store/Reducers/articleReducer/articleReducer";
-import {actions as topNewsActions} from "../../../999_Store/Reducers/topNewsReducer/newsReducer";
-import {Pagination} from "../../Chunks/Pagination/Pagination";
-import {selectTopNews} from "../../../999_Store/selectors";
-import {SearchBar} from "../../Chunks/SearchBar/SearchBar";
-import {Message} from "../../Chunks/MessageModal/Message";
+import {useDispatch, useSelector} from 'react-redux'
+import {topNewsTC} from '../../../999_Store/Reducers/topNewsReducer/newsReducer'
+import {useNavigate} from 'react-router-dom'
+import {Loader} from '../../Chunks/Loader/Loader'
+import {ArticleType, UserInfoType} from '../../../999_Store/Reducers/loginReducer/loginReducer'
+import {actions} from '../../../999_Store/Reducers/articleReducer/articleReducer'
+import {actions as topNewsActions} from '../../../999_Store/Reducers/topNewsReducer/newsReducer'
+import {Pagination} from '../../Chunks/Pagination/Pagination'
+import {selectTopNews} from '../../../999_Store/selectors'
+import {SearchBar} from '../../Chunks/SearchBar/SearchBar'
+import {Message} from '../../Chunks/MessageModal/Message'
 
 type PropsType = {
     userInfo: null | UserInfoType
@@ -48,7 +48,7 @@ export const MainPage: FC<PropsType> = ({userInfo}) => {
 
 
     return (
-        <main className='container'>
+        <main className="container">
             <SearchBar handleSubmit={handleSubmit}/>
             {topNews && topNews.length > 0 && (
                 <Pagination currentPage={currentPage} setPageHandler={handlePage} totalPages={totalPages}
@@ -58,7 +58,8 @@ export const MainPage: FC<PropsType> = ({userInfo}) => {
                 <div>No news correspond to search criteria</div>
             )}
             {errorMessage &&
-            <Message type='error' message={errorMessage} handleCloseMessage={() => dispatch(topNewsActions.resetAC())}/>}
+                <Message type="error" message={errorMessage}
+                         handleCloseMessage={() => dispatch(topNewsActions.resetAC())}/>}
             {loading ? <Loader/> : (
                 <div className={s.news}>
                     {topNews && topNews.map((article, i) => {

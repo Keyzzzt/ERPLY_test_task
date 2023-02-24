@@ -1,13 +1,13 @@
 import s from './login.module.scss'
-import {CustomInput} from "../../Chunks/CustomInput/CustomInput";
-import React, {FormEvent, useEffect, useState} from "react";
-import {Button} from "../../Chunks/Button/Button";
-import {actions, loginTC} from "../../../999_Store/Reducers/loginReducer/loginReducer";
-import {useDispatch, useSelector} from "react-redux";
-import {Link, useNavigate} from 'react-router-dom';
-import {Loader} from "../../Chunks/Loader/Loader";
-import {Message} from "../../Chunks/MessageModal/Message";
-import {selectUserInfo} from "../../../999_Store/selectors";
+import {CustomInput} from '../../Chunks/CustomInput/CustomInput'
+import React, {FormEvent, useEffect, useState} from 'react'
+import {Button} from '../../Chunks/Button/Button'
+import {actions, loginTC} from '../../../999_Store/Reducers/loginReducer/loginReducer'
+import {useDispatch, useSelector} from 'react-redux'
+import {Link, useNavigate} from 'react-router-dom'
+import {Loader} from '../../Chunks/Loader/Loader'
+import {Message} from '../../Chunks/MessageModal/Message'
+import {selectUserInfo} from '../../../999_Store/selectors'
 
 export const LoginPage = () => {
     const dispatch = useDispatch()
@@ -35,8 +35,8 @@ export const LoginPage = () => {
     const isDisabledButton = inputError || loading || !!errorMessage
 
     return (
-        <div className='container'>
-            {errorMessage && <Message type='error' message={errorMessage}
+        <div className="container">
+            {errorMessage && <Message type="error" message={errorMessage}
                                       handleCloseMessage={() => dispatch(actions.resetLoginMessagesAC())}/>}
             <main className={s.formContainer + ' ' + className}>
                 <h1>Login</h1>
@@ -44,7 +44,7 @@ export const LoginPage = () => {
                 <form onSubmit={handleSubmit}>
                     <CustomInput
                         id={'loginEmail'}
-                        label='Email'
+                        label="Email"
                         returnValue={setEmail}
                         setInputError={setInputError}
                         inputError={inputError}
@@ -55,7 +55,7 @@ export const LoginPage = () => {
                     />
                     <CustomInput
                         id={'loginKey'}
-                        label='API Key'
+                        label="API Key"
                         returnValue={setApiKey}
                         setInputError={setInputError}
                         inputError={inputError}
@@ -64,15 +64,15 @@ export const LoginPage = () => {
                         name="apiKey"
                         value={apiKey}
                     />
-                    <Button disabled={isDisabledButton} type='submit' title='Login' color='success' minWidth='100%'/>
+                    <Button disabled={isDisabledButton} type="submit" title="Login" color="success" minWidth="100%"/>
                     <div className={s.help} onClick={() => setClassName(s.showClue)}>Help</div>
                 </form>
                 <div className={s.clue + ' ' + className}>
                     <div className={s.clueText}>
-                        <p>To get key please <Link to='https://newsapi.org/register' target="_blank"
+                        <p>To get key please <Link to="https://newsapi.org/register" target="_blank"
                                                    rel="noopener noreferrer">Register</Link></p>
                     </div>
-                    <Button onClick={() => setClassName('')} title='Close' type='button' color='success'/>
+                    <Button onClick={() => setClassName('')} title="Close" type="button" color="success"/>
                 </div>
             </main>
         </div>

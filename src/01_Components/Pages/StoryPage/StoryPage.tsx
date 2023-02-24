@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useState} from 'react'
 import s from './storyPage.module.scss'
-import { useSelector} from "react-redux";
-import {fakeFetchFn, parsePublishedDate} from "../../../04_Utils/utils";
-import {Link} from "react-router-dom";
-import {Loader} from "../../Chunks/Loader/Loader";
-import {selectArticle} from "../../../999_Store/selectors";
+import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
+import {Loader} from '../../Chunks/Loader/Loader'
+import {selectArticle} from '../../../999_Store/selectors'
+import {fakeFetchFn} from '../../../04_Utils/fakeFetch'
+import {parsePublishedDate} from '../../../04_Utils/parsePublishedDate'
 
 
 export const StoryPage = () => {
@@ -15,7 +16,7 @@ export const StoryPage = () => {
 
     const contentBody = article?.content?.split('[')[0].trim()
     return (
-        <div className='container'>
+        <div className="container">
             {fakeFetch
                 ? (<Loader/>)
                 : (article && (

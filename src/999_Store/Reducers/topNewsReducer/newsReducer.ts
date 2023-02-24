@@ -1,6 +1,6 @@
-import {BaseThunkType, InferActionTypes} from "../../../types";
-import {API} from "../../../03_API/API";
-import {ArticleType, ResponseWithTopNewsType} from "../loginReducer/loginReducer";
+import {BaseThunkType, InferActionTypes} from '../../../types'
+import {API} from '../../../03_API/API'
+import {ArticleType, ResponseWithTopNewsType} from '../loginReducer/loginReducer'
 
 type ThunkType = BaseThunkType<ActionType>
 type InitialStateType = typeof initialState

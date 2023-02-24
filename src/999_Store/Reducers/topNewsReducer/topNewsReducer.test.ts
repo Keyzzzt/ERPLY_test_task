@@ -1,5 +1,6 @@
-import {actions, initialState, newsReducer} from "./newsReducer";
-import {generateArticle} from "../../../04_Utils/utils";
+import {actions, initialState, newsReducer} from './newsReducer'
+import {generateArticle} from '../../../04_Utils/generateArticle'
+
 test('should set loading to true', () => {
     const endState = newsReducer(initialState, actions.requestAC())
     expect(endState.loading).toEqual(true)
@@ -29,7 +30,7 @@ test('should set topNews, totalNewsCount and loading', () => {
     expect(endState.loading).toEqual(false)
 })
 test('should reset state', () => {
-    const startState= {
+    const startState = {
         topNews: [generateArticle()],
         totalNewsCount: 101,
         pageSize: 10,

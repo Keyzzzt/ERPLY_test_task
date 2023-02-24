@@ -1,5 +1,6 @@
-import axios from "axios";
-import {ResponseWithTopNewsType} from "../999_Store/Reducers/loginReducer/loginReducer";
+import axios from 'axios'
+import {ResponseWithTopNewsType} from '../999_Store/Reducers/loginReducer/loginReducer'
+
 const API_BASE_URL = 'https://newsapi.org/v2/'
 
 

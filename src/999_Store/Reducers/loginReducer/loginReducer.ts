@@ -1,5 +1,5 @@
-import {BaseThunkType, InferActionTypes} from "../../../types";
-import {API} from "../../../03_API/API";
+import {BaseThunkType, InferActionTypes} from '../../../types'
+import {API} from '../../../03_API/API'
 
 type ThunkType = BaseThunkType<ActionType>
 type InitialStateType = typeof initialState

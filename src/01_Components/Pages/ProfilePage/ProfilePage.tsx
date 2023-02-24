@@ -6,7 +6,7 @@ import {actions, loginTC, UserInfoType} from "../../../999_Store/Reducers/loginR
 import {useDispatch} from "react-redux";
 import {Loader} from "../../Chunks/Loader/Loader";
 import {Message} from "../../Chunks/MessageModal/Message";
-import {fakeFetchFn} from "../../../04_Utils/utils";
+import {fakeFetchFn} from '../../../04_Utils/fakeFetch'
 
 type PropsType = {
     userInfo: null | UserInfoType

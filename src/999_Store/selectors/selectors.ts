@@ -1,4 +1,4 @@
-import {StateType} from "./store";
+import {StateType} from '../store'
 
 export const selectUserInfo = (state: StateType) => state.login
 export const selectTopNews = (state: StateType) => state.topNews
